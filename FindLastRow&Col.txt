@@ -1,0 +1,10 @@
+Dim LastRow As Long
+Dim LastCol As Integer
+
+    With ActiveSheet
+        LastRow = .Cells(.Rows.Count, "B").End(xlUp).Row
+        LastCol = .Cells(2, .Columns.Count).End(xlToLeft).Column
+    End With
+    
+    MsgBox LastRow
+    MsgBox LastCol
